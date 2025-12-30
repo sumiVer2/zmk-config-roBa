@@ -35,23 +35,118 @@
         };
 
         shift_tab {
-            bindings = <&kp LS(TAB)>;
+            bindings = <&kp LG(TAB)>;
+            key-positions = <26 25>;
+        };
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <25 13>;
+        };
+
+        pipe {
+            bindings = <&kp PIPE>;
+            key-positions = <7 19>;
+        };
+
+        back_slash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <19 31>;
+        };
+
+        tilda {
+            bindings = <&kp TILDE>;
+            key-positions = <4 14>;
+        };
+
+        grabe_accent {
+            bindings = <&kp GRAVE>;
+            key-positions = <14 26>;
+        };
+
+        less_than {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <2 12>;
+        };
+
+        greater_than {
+            bindings = <&kp GREATER_THAN>;
+            key-positions = <12 24>;
+        };
+
+        exclamation {
+            bindings = <&kp EXCLAMATION>;
+            key-positions = <1 11>;
+        };
+
+        quetion {
+            bindings = <&kp QUESTION>;
+            key-positions = <11 23>;
+        };
+
+        percent {
+            bindings = <&kp PERCENT>;
+            key-positions = <1 3>;
+        };
+
+        dollar {
+            bindings = <&kp DOLLAR>;
+            key-positions = <11 13>;
+        };
+
+        hash {
+            bindings = <&kp HASH>;
+            key-positions = <23 25>;
+        };
+
+        left_parenthesis {
+            bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <12 13>;
         };
 
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
+        right_parenthesis {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <18 19>;
         };
 
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
+        left_bracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <2 3>;
         };
 
-        eq {
-            bindings = <&kp EQUAL>;
+        right_bracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <7 6>;
+        };
+
+        left_brace {
+            bindings = <&kp LEFT_BRACE>;
             key-positions = <24 25>;
+        };
+
+        right_brace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <30 31>;
+        };
+
+        caret {
+            bindings = <&kp CARET>;
+            key-positions = <27 26>;
+        };
+
+        and {
+            bindings = <&kp AMPERSAND>;
+            key-positions = <0 10>;
+        };
+
+        asterisk {
+            bindings = <&kp ASTERISK>;
+            key-positions = <10 22>;
+        };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <16 17>;
         };
     };
 
@@ -81,8 +176,8 @@
         default_layer {
             bindings = <
 &kp Q             &kp W             &kp E               &kp R                   &kp T                                        &kp Y        &kp U  &kp I     &kp O     &kp P
-&kp A             &kp S             &kp D               &kp F                   &kp G        &mkp MB3         &kp MINUS      &kp H        &kp J  &kp K     &kp L     &kp SQT
-&mt LEFT_SHIFT Z  &kp X             &kp C               &kp V                   &kp B        &kp TAB          &kp SEMICOLON  &kp N        &kp M  &mkp MB1  &mkp MB2  &lt 1 SLASH
+&kp A             &kp S             &kp D               &kp F                   &kp G        &mkp MB3         &kp MINUS      &kp H        &kp J  &kp K     &kp L     &kp SEMICOLON
+&mt LEFT_SHIFT Z  &kp X             &kp C               &kp V                   &kp B        &kp TAB          &kp APOS       &kp N        &kp M  &mkp MB1  &mkp MB2  &lt 1 SLASH
 &kp LEFT_SHIFT    &kp LEFT_CONTROL  &mt LEFT_ALT LANG2  &mt LEFT_COMMAND LANG1  &lt 1 SPACE  &kp AT_SIGN      &kp BACKSPACE  &lt 2 ENTER                             &kp HASH
             >;
 
