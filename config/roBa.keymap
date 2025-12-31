@@ -196,10 +196,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W             &kp E               &kp R                   &kp T                                                    &kp Y        &kp U  &kp I     &kp O     &kp P
-&kp A             &kp S             &kp D               &kp F                   &kp G        &lt_to_layer_0 3 HASH        &kp MINUS      &kp H        &kp J  &kp K     &lt 5 L   &kp SEMICOLON
-&mt LEFT_SHIFT Z  &kp X             &kp C               &kp V                   &kp B        &kp TAB                      &kp APOS       &kp N        &kp M  &mkp MB1  &mkp MB2  &lt 1 SLASH
-&kp LEFT_SHIFT    &kp LEFT_CONTROL  &mt LEFT_ALT LANG2  &mt LEFT_COMMAND LANG1  &lt 1 SPACE  &mt EXCLAMATION AT_SIGN      &kp BACKSPACE  &lt 2 ENTER                             &mt TILDE HASH
+&kp Q             &kp W             &kp E               &kp R                   &kp T                                                  &kp Y        &kp U  &kp I     &kp O     &kp P
+&kp A             &kp S             &kp D               &kp F                   &kp G        &lt_to_layer_0 3 HASH      &kp MINUS      &kp H        &kp J  &kp K     &lt 5 L   &kp SEMICOLON
+&mt LEFT_SHIFT Z  &kp X             &kp C               &kp V                   &kp B        &mt EXCLAMATION TAB        &kp APOS       &kp N        &kp M  &mkp MB1  &mkp MB2  &lt 1 SLASH
+&kp LEFT_SHIFT    &kp LEFT_CONTROL  &mt LEFT_ALT LANG2  &mt LEFT_COMMAND LANG1  &lt 1 SPACE  &mt HASH AT_SIGN           &kp BACKSPACE  &lt 2 ENTER                             &mt COMMA PERIOD
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -241,7 +241,7 @@
             >;
         };
 
-        ARROW {
+        SCROLL {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
