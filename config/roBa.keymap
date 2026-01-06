@@ -194,32 +194,41 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        DAFAULT_LAYER {
             bindings = <
-&kp Q             &kp W             &kp E               &kp R                   &kp T                                                  &kp Y        &kp U  &kp I     &kp O     &kp P
-&kp A             &kp S             &kp D               &kp F                   &kp G        &lt_to_layer_0 3 HASH      &kp MINUS      &kp H        &kp J  &kp K     &lt 5 L   &kp SEMICOLON
-&mt LEFT_SHIFT Z  &kp X             &kp C               &kp V                   &kp B        &mt EXCLAMATION TAB        &kp APOS       &kp N        &kp M  &mkp MB1  &mkp MB2  &lt 1 SLASH
-&kp LEFT_SHIFT    &kp LEFT_CONTROL  &mt LEFT_ALT LANG2  &mt LEFT_COMMAND LANG1  &lt 1 SPACE  &mt HASH AT_SIGN           &kp BACKSPACE  &lt 2 ENTER                             &mt COMMA PERIOD
+&kp Q             &kp W             &kp E         &kp R                        &kp T                                                   &kp Y        &kp U  &kp I     &kp O     &kp P
+&mt LCTRL A       &kp S             &kp D         &kp F                        &kp G        &lt_to_layer_0 4 HASH       &kp MINUS      &kp H        &kp J  &kp K     &lt 5 L   &kp SEMICOLON
+&mt LEFT_SHIFT Z  &kp X             &kp C         &kp V                        &kp B        &mt EXCLAMATION TAB         &kp APOS       &kp N        &kp M  &mkp MB1  &mkp MB2  &lt 1 SLASH
+&kp LEFT_SHIFT    &kp LEFT_CONTROL  &kp LEFT_ALT  &mt LEFT_COMMAND LANGUAGE_2  &lt 1 SPACE  &lt_to_layer_0 2 LANG1      &kp BACKSPACE  &lt 3 ENTER                             &kp ESCAPE
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
-        NUM_ALLOW {
+        SYMBOL {
             bindings = <
-&trans  &kp N7        &kp N8        &kp N9        &trans                             &trans  &trans    &trans        &trans     &trans
-&trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans         &trans      &trans  &trans  &kp LEFT  &kp UP_ARROW  &kp RIGHT  &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSPACE  &trans      &trans  &trans  &trans    &kp DOWN      &trans     &trans
-&trans  &trans        &kp N0        &trans        &trans         &trans      &trans  &trans                                     &trans
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH           &kp DOLLAR         &kp PERCENT                             &kp CARET       &kp AMPERSAND   &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp GRAVE        &kp TILDE    &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &kp PLUS     &trans      &kp COLON      &kp EQUAL       &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LESS_THAN         &kp GREATER_THAN
+&kp BACKSLASH    &kp PIPE     &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE   &kp MINUS    &trans      &kp SEMICOLON  &kp UNDERSCORE  &kp COMMA       &kp PERIOD       &kp QUESTION          &kp SLASH
+&kp LSHFT        &trans       &trans             &trans             &trans       &trans      &kp BACKSPACE  &kp ENTER                                                              &kp BACKSLASH
             >;
         };
 
-        FUNCTION_COMMAND {
+        NUMBER {
             bindings = <
-&kp F1   &kp F2   &kp F3  &kp F4  &kp F5                                                 &kp HOME       &kp END               &kp PAGE_UP       &kp PAGE_DOWN          &kp RIGHT_PARENTHESIS
-&kp F6   &kp F7   &kp F8  &kp F9  &kp F10                 &trans                 &trans  &kp LG(LA(H))  &kp LC(LEFT)          &kp LC(UP_ARROW)  &kp LC(RIGHT)          &kp PERCENT
-&kp F11  &kp F12  &trans  &trans  &kp LC(LA(LEFT_ARROW))  &kp LA(LC(RIGHT))      &trans  &kp LG(TAB)    &kp LG(LEFT_BRACKET)  &kp LC(DOWN)      &kp LG(RIGHT_BRACKET)  &kp BACKSLASH
-&trans   &trans   &trans  &trans  &trans                  &trans                 &trans  &trans                                                                        &kp PIPE
+&kp F1   &kp F2   &kp F3  &kp F4  &kp F5                              &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &kp MINUS
+&kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &trans      &trans         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS      &kp ASTERISK
+&kp F11  &kp F12  &trans  &trans  &trans   &trans      &trans         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PERCENT   &kp SLASH
+&trans   &trans   &trans  &trans  &trans   &trans      &kp BACKSPACE  &kp ENTER                                               &kp ESCAPE
+            >;
+        };
+
+        MOVE {
+            bindings = <
+&trans          &trans     &trans            &kp LA(LC(UP_ARROW))  &trans                                      &kp LA(LG(LEFT))  &kp LA(LG(UP_ARROW))  &kp UP      &kp LA(LG(DOWN))  &kp LA(LG(RIGHT))
+&trans          &trans     &kp LA(LC(LEFT))  &kp LA(LC(DOWN))      &kp LA(LC(RIGHT))  &trans           &trans  &kp HOME          &kp LEFT              &kp DOWN    &kp RIGHT         &kp END
+&trans          &trans     &trans            &trans                &trans             &kp LG(TAB)      &trans  &kp LG(TAB)       &kp LC(LEFT)          &kp LC(UP)  &kp LC(RIGHT)     &trans
+&kp LEFT_SHIFT  &kp LCTRL  &kp LEFT_ALT      &kp LEFT_COMMAND      &trans             &trans           &trans  &trans                                                                &trans
             >;
         };
 
@@ -229,15 +238,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans        &trans          &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &bt BT_CLR    &bt BT_CLR_ALL  &bt BT_PRV    &bt BT_NXT
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                    &trans
-            >;
-        };
-
-        layer_6 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                          &trans
             >;
         };
 
